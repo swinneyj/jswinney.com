@@ -3,338 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Swinney - Cybersecurity Operations Analyst</title>
-    <meta name="description" content="Cybersecurity Operations Analyst specializing in threat detection, incident response, and NIST compliance. SOC professional with 4+ years enterprise security experience.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#05070d">
+    <title>Justin Swinney — Security Engineer &amp; AI Builder</title>
+    <meta name="description" content="Security engineer and AI builder. Enterprise SOC experience in threat detection and incident response, now building AI-driven security tooling. Active Secret Clearance.">
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jswinney.com/">
+    <meta property="og:title" content="Justin Swinney — Security Engineer & AI Builder">
+    <meta property="og:description" content="Threat detection, incident response, and AI-driven security tooling. SOC professional · AI builder · Active Secret Clearance.">
+    <meta property="og:image" content="https://jswinney.com/og.png">
+    <meta property="og:site_name" content="Justin Swinney">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Justin Swinney — Security Engineer & AI Builder">
+    <meta name="twitter:description" content="Threat detection, incident response, and AI-driven security tooling. Active Secret Clearance.">
+    <meta name="twitter:image" content="https://jswinney.com/og.png">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#home" class="logo">JS</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- ============ NAV ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="logo" aria-label="Home">JS<span class="logo-cursor">_</span></a>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#certifications">Certs</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Justin Swinney</h1>
-                <p class="hero-subtitle">Cybersecurity Operations Analyst | SOC Specialist</p>
-                <p class="hero-description">Enterprise security operations professional with 4+ years of SOC experience. Specialized in real-time threat detection, incident response, and NIST compliance. Active Secret Clearance holder.</p>
+    <!-- ============ HERO ============ -->
+    <header id="home" class="hero">
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="container hero-grid">
+            <div class="hero-left">
+                <div class="hero-status"><span class="pulse-dot"></span> SYSTEMS ONLINE · AI × SECURITY</div>
+                <h1 class="hero-name">Justin<br><span class="hero-name-accent">Swinney</span></h1>
+                <p class="hero-role"><span class="prompt">&gt;</span> <span id="typewriter"></span><span class="type-cursor">▊</span></p>
+                <p class="hero-desc">Security engineer with enterprise SOC experience in threat detection and incident response — now building <strong>AI-driven security tooling</strong> and agents with guardrails baked in.</p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                </div>
+                <div class="hero-chips">
+                    <span class="chip">🛡️ Active Secret Clearance</span>
+                    <span class="chip">📍 Leonardtown, MD</span>
+                    <span class="chip">🎯 SOC → AI</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about" class="about">
+            <div class="terminal" aria-hidden="true">
+                <div class="term-head">
+                    <span class="term-dot term-dot-r"></span>
+                    <span class="term-dot term-dot-y"></span>
+                    <span class="term-dot term-dot-g"></span>
+                    <span class="term-title">jswinney@ai-sec:~</span>
+                </div>
+                <div class="term-body"></div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-hint" aria-label="Scroll down">▾</a>
+    </header>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>THREAT DETECTION</span><span class="tick-sep">✦</span>
+            <span>INCIDENT RESPONSE</span><span class="tick-sep">✦</span>
+            <span>MITRE ATT&amp;CK</span><span class="tick-sep">✦</span>
+            <span>AI AGENTS</span><span class="tick-sep">✦</span>
+            <span>LLM SECURITY</span><span class="tick-sep">✦</span>
+            <span>SIEM / SPLUNK</span><span class="tick-sep">✦</span>
+            <span>THREAT HUNTING</span><span class="tick-sep">✦</span>
+            <span>NIST 800-53</span><span class="tick-sep">✦</span>
+            <span>THREAT DETECTION</span><span class="tick-sep">✦</span>
+            <span>INCIDENT RESPONSE</span><span class="tick-sep">✦</span>
+            <span>MITRE ATT&amp;CK</span><span class="tick-sep">✦</span>
+            <span>AI AGENTS</span><span class="tick-sep">✦</span>
+            <span>LLM SECURITY</span><span class="tick-sep">✦</span>
+            <span>SIEM / SPLUNK</span><span class="tick-sep">✦</span>
+            <span>THREAT HUNTING</span><span class="tick-sep">✦</span>
+            <span>NIST 800-53</span><span class="tick-sep">✦</span>
+        </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
-                <div class="header-underline"></div>
+                <span class="kicker">// about</span>
+                <h2>Who I Am</h2>
             </div>
-            <div class="about-content">
+            <div class="about-grid">
                 <div class="about-text">
-                    <p>I'm a Cybersecurity Operations Analyst with 4+ years of enterprise SOC experience specializing in real-time threat detection, incident response, and security control validation. My expertise spans SIEM/EDR tools, NIST compliance frameworks, and proactive threat hunting using MITRE ATT&CK methodologies.</p>
-                    <p>Currently at Caterpillar, I manage daily security operations across cloud and on-premise environments, handling 50+ security events daily, conducting threat analysis, and supporting continuous monitoring programs aligned with NIST SP 800-53. I hold an Active Secret Clearance and focus on identifying control gaps, validating security controls, and improving enterprise security posture.</p>
+                    <p>I'm a security engineer with <strong>4+ years of enterprise SOC experience</strong> — real-time threat detection, incident response, and security control validation across cloud and on-prem environments at Caterpillar scale.</p>
+                    <p>My day job is keeping attackers out and finding the ones who slip through: SIEM engineering, MITRE ATT&amp;CK-driven threat hunting, NIST compliance. My current obsession is the intersection where I think the next decade of security lives — <strong>AI agents and LLM tooling built with security-first guardrails</strong>, and using AI to make detection faster and smarter.</p>
+                    <p>I hold an <strong>Active Secret Clearance</strong> and certifications across security, cloud, and infrastructure.</p>
                 </div>
-                <div class="about-highlights">
-                    <div class="highlight-card">
-                        <h3>4+</h3>
-                        <p>Years SOC Experience</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>50+</h3>
-                        <p>Daily Security Events</p>
-                    </div>
-                    <div class="highlight-card">
-                        <h3>5</h3>
-                        <p>Certifications</p>
-                    </div>
+                <div class="stats">
+                    <div class="stat-card"><span class="stat-num">4+</span><span class="stat-label">Years SOC Experience</span></div>
+                    <div class="stat-card"><span class="stat-num">50+</span><span class="stat-label">Daily Security Events</span></div>
+                    <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Certifications</span></div>
+                    <div class="stat-card"><span class="stat-num">Top 50</span><span class="stat-label">Splunk BOTS (2019)</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <h2>Technical Skills</h2>
-                <div class="header-underline"></div>
+                <span class="kicker">// capabilities</span>
+                <h2>Technical Arsenal</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Security Monitoring & SIEM</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Splunk SIEM</span>
-                        <span class="skill-tag">ELK Stack</span>
-                        <span class="skill-tag">CrowdStrike Falcon</span>
-                        <span class="skill-tag">IDS/IPS (Snort, Zeek)</span>
-                        <span class="skill-tag">Real-time Detection</span>
-                        <span class="skill-tag">Alert Tuning</span>
+                <div class="skill-cat">
+                    <h3><span class="cat-icon">🛰️</span> Detection &amp; SIEM</h3>
+                    <div class="tags">
+                        <span class="tag">Splunk SIEM</span><span class="tag">ELK Stack</span><span class="tag">CrowdStrike Falcon</span><span class="tag">IDS/IPS · Snort · Zeek</span><span class="tag">Real-time Detection</span><span class="tag">Alert Tuning</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Incident Response & Threat Analysis</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Event Correlation</span>
-                        <span class="skill-tag">MITRE ATT&CK</span>
-                        <span class="skill-tag">Threat Hunting</span>
-                        <span class="skill-tag">Root Cause Analysis</span>
-                        <span class="skill-tag">C2 Detection</span>
-                        <span class="skill-tag">Forensics & Analysis</span>
+                <div class="skill-cat">
+                    <h3><span class="cat-icon">🕵️</span> Response &amp; Threat Intel</h3>
+                    <div class="tags">
+                        <span class="tag">Event Correlation</span><span class="tag">MITRE ATT&amp;CK</span><span class="tag">Threat Hunting</span><span class="tag">Root Cause Analysis</span><span class="tag">C2 Detection</span><span class="tag">Forensics</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Cloud Security & Compliance</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS Security</span>
-                        <span class="skill-tag">CloudTrail & GuardDuty</span>
-                        <span class="skill-tag">NIST SP 800-53</span>
-                        <span class="skill-tag">NIST 800-171</span>
-                        <span class="skill-tag">RMF & CONMON</span>
-                        <span class="skill-tag">Control Validation</span>
+                <div class="skill-cat">
+                    <h3><span class="cat-icon">☁️</span> Cloud &amp; Compliance</h3>
+                    <div class="tags">
+                        <span class="tag">AWS Security</span><span class="tag">CloudTrail &amp; GuardDuty</span><span class="tag">NIST SP 800-53</span><span class="tag">NIST 800-171</span><span class="tag">RMF &amp; CONMON</span><span class="tag">Control Validation</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Systems & Technical</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Windows/Linux</span>
-                        <span class="skill-tag">PowerShell</span>
-                        <span class="skill-tag">SQL & Log Analysis</span>
-                        <span class="skill-tag">Risk Assessment</span>
-                        <span class="skill-tag">Vulnerability Analysis</span>
-                        <span class="skill-tag">Terraform</span>
+                <div class="skill-cat">
+                    <h3><span class="cat-icon">🤖</span> AI &amp; Automation</h3>
+                    <div class="tags">
+                        <span class="tag">AI Agents</span><span class="tag">LLM Integration</span><span class="tag">Prompt Hardening</span><span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">Terraform</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Projects</h2>
-                <div class="header-underline"></div>
+                <span class="kicker">// projects &amp; milestones</span>
+                <h2>Featured Work</h2>
+                <p class="section-sub">Notable projects, wins, and certifications — every entry here was shipped through my AI intake pipeline. Latest first.</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <div class="project-content">
-                        <h3>Enterprise Threat Detection (Caterpillar)</h3>
-                        <p class="project-challenge"><strong>Challenge:</strong> Monitor 50+ daily security events across enterprise cloud and on-prem environments.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Real-time event correlation using Splunk, CrowdStrike, and AWS CloudTrail/GuardDuty.</p>
-                        <div class="project-tech">
-                            <span>Splunk</span>
-                            <span>CrowdStrike</span>
-                            <span>AWS</span>
-                            <span>MITRE ATT&CK</span>
-                        </div>
-                        <p class="project-outcome"><strong>Outcome:</strong> Reduced MTTD, improved incident accuracy, maintained 99.9% NIST compliance.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <div class="project-content">
-                        <h3>Splunk SIEM Rule Tuning</h3>
-                        <p class="project-challenge"><strong>Challenge:</strong> Reduce false positives in SIEM detection rules.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Tuned 5 critical rules, developed custom dashboards, improved analyst efficiency.</p>
-                        <div class="project-tech">
-                            <span>Splunk SPL</span>
-                            <span>Custom Dashboards</span>
-                            <span>Alert Tuning</span>
-                        </div>
-                        <p class="project-outcome"><strong>Outcome:</strong> 60% reduction in false positives, 40% faster response time.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <div class="project-content">
-                        <h3>Proactive Threat Hunting</h3>
-                        <p class="project-challenge"><strong>Challenge:</strong> Identify emerging threats and advanced adversary techniques.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Threat hunting using MITRE ATT&CK, OSINT, and threat intelligence feeds.</p>
-                        <div class="project-tech">
-                            <span>MITRE ATT&CK</span>
-                            <span>Threat Intel</span>
-                            <span>OSINT</span>
-                        </div>
-                        <p class="project-outcome"><strong>Outcome:</strong> Identified 12+ adversary TTPs, improved threat visibility.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-                    <div class="project-content">
-                        <h3>Incident Notification (Criterion Systems)</h3>
-                        <p class="project-challenge"><strong>Challenge:</strong> Notify customers of compromised credentials professionally.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Performed impact assessment, coordinated customer responses.</p>
-                        <div class="project-tech">
-                            <span>Incident Response</span>
-                            <span>Customer Comm</span>
-                            <span>Remediation</span>
-                        </div>
-                        <p class="project-outcome"><strong>Outcome:</strong> Notified 10 customers, prevented credential recycling.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
-                    <div class="project-content">
-                        <h3>Splunk Boss of the SOC - Top 50</h3>
-                        <p class="project-challenge"><strong>Challenge:</strong> Compete in Splunk's premier detection competition.</p>
-                        <p class="project-solution"><strong>Solution:</strong> Advanced Splunk skills, complex queries, incident analysis.</p>
-                        <div class="project-tech">
-                            <span>Splunk SPL</span>
-                            <span>Detection Logic</span>
-                            <span>Analysis</span>
-                        </div>
-                        <p class="project-outcome"><strong>Outcome:</strong> Top 50 out of 1000+ participants (2019).</p>
-                    </div>
-                </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- rendered from projects.js -->
             </div>
         </div>
     </section>
 
-    <section id="certifications" class="certifications">
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section id="certifications" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <h2>Certifications & Achievements</h2>
-                <div class="header-underline"></div>
+                <span class="kicker">// credentials</span>
+                <h2>Certifications</h2>
             </div>
             <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">🔐</div>
-                    <h3>Security+</h3>
-                    <p class="cert-issuer">CompTIA</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔑</div>
-                    <h3>CySA+</h3>
-                    <p class="cert-issuer">CompTIA</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">☁️</div>
-                    <h3>AWS SAA-C03</h3>
-                    <p class="cert-issuer">Amazon Web Services</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🌐</div>
-                    <h3>Network+</h3>
-                    <p class="cert-issuer">CompTIA</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🔧</div>
-                    <h3>Terraform Associate</h3>
-                    <p class="cert-issuer">HashiCorp</p>
-                </div>
-                <div class="cert-card">
-                    <div class="cert-icon">🛡️</div>
-                    <h3>Secret Clearance</h3>
-                    <p class="cert-issuer">U.S. Government</p>
-                </div>
+                <div class="cert-card"><span class="cert-icon">🔐</span><h3>Security+</h3><span class="cert-issuer">CompTIA</span></div>
+                <div class="cert-card cert-hot"><span class="cert-icon">🔑</span><h3>CySA+</h3><span class="cert-issuer">CompTIA</span><span class="cert-meta">CS0-004 · 2026</span></div>
+                <div class="cert-card"><span class="cert-icon">☁️</span><h3>AWS SAA-C03</h3><span class="cert-issuer">Amazon Web Services</span></div>
+                <div class="cert-card"><span class="cert-icon">🌐</span><h3>Network+</h3><span class="cert-issuer">CompTIA</span></div>
+                <div class="cert-card"><span class="cert-icon">🔧</span><h3>Terraform Associate</h3><span class="cert-issuer">HashiCorp</span></div>
+                <div class="cert-card"><span class="cert-icon">🛡️</span><h3>Secret Clearance</h3><span class="cert-issuer">U.S. Government</span></div>
             </div>
-            <div class="achievements-section">
-                <h3>Notable Achievements</h3>
+            <div class="achievements">
+                <h3 class="achievements-title">Notable Achievements</h3>
                 <div class="achievements-list">
-                    <div class="achievement-item">
-                        <span class="achievement-icon">🏆</span>
-                        <p><strong>Top 50 Splunk Boss of the SOC (2019)</strong></p>
-                    </div>
-                    <div class="achievement-item">
-                        <span class="achievement-icon">🎓</span>
-                        <p><strong>30-Person Cyber Bootcamp (2018)</strong></p>
-                    </div>
-                    <div class="achievement-item">
-                        <span class="achievement-icon">🚩</span>
-                        <p><strong>1st Place DOE CyberFire CTF (2021)</strong></p>
-                    </div>
-                    <div class="achievement-item">
-                        <span class="achievement-icon">⚡</span>
-                        <p><strong>DEF CON 27 Red Team (2019)</strong></p>
-                    </div>
+                    <div class="achievement-item"><span class="achievement-icon">🏆</span><p><strong>Top 50 Splunk Boss of the SOC</strong> — 1000+ participants (2019)</p></div>
+                    <div class="achievement-item"><span class="achievement-icon">🎓</span><p><strong>30-Person Cyber Bootcamp</strong> instructor-led program (2018)</p></div>
+                    <div class="achievement-item"><span class="achievement-icon">🚩</span><p><strong>1st Place DOE CyberFire CTF</strong> (2021)</p></div>
+                    <div class="achievement-item"><span class="achievement-icon">⚡</span><p><strong>DEF CON 27 Red Team</strong> (2019)</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-header">
+                <span class="kicker">// connect</span>
                 <h2>Let's Work Together</h2>
-                <div class="header-underline"></div>
+                <p class="section-sub">Hiring, collaborating, or building something in the AI × security space — my inbox is open.</p>
             </div>
-            <p class="contact-intro">Whether you're looking to hire or collaborate, I'd love to hear from you.</p>
-
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <strong>Email</strong>
-                        <p><a href="mailto:justin.swinney88@gmail.com">justin.swinney88@gmail.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone</strong>
-                        <p><a href="tel:+17023494456">+1 (702) 349-4456</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Location</strong>
-                        <p>Leonardtown, MD</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Clearance</strong>
-                        <p>Active Secret Clearance</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/justinswinney" class="social-icon">in</a>
+                    <div class="contact-item"><strong>Email</strong><a href="mailto:justin.swinney88@gmail.com">justin.swinney88@gmail.com</a></div>
+                    <div class="contact-item"><strong>Phone</strong><a href="tel:+17023494456">+1 (702) 349-4456</a></div>
+                    <div class="contact-item"><strong>Location</strong><span>Leonardtown, MD</span></div>
+                    <div class="contact-item"><strong>Clearance</strong><span class="clearance-tag"><span class="pulse-dot"></span> Active Secret</span></div>
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/justinswinney" class="social-link" target="_blank" rel="noopener">in ▸ LinkedIn</a>
+                        <a href="https://github.com/swinneyj" class="social-link" target="_blank" rel="noopener">&lt;/&gt; GitHub</a>
                     </div>
                 </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/mzdkalag" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <p id="formStatus" style="display:none; margin-top:1rem; text-align:center;"></p>
-                    </form>
-                </div>
+                <form class="contact-form" action="https://formspree.io/f/mzdkalag" method="POST">
+                    <div class="form-group">
+                        <label for="cf-name">Name</label>
+                        <input id="cf-name" type="text" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email</label>
+                        <input id="cf-email" type="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message</label>
+                        <textarea id="cf-message" name="message" rows="5" placeholder="What are we building?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="formStatus" class="form-status" role="status"></p>
+                </form>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Justin Swinney. All rights reserved.</p>
+        <div class="container footer-inner">
+            <span class="footer-mono">jswinney@ai-sec:~$ <span class="footer-cursor">▊</span></span>
+            <span>© <span id="year">2026</span> Justin Swinney · Built with AI, secured by design</span>
         </div>
     </footer>
 
-    <link rel="stylesheet" href="styles.css">
+    <script src="projects.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
