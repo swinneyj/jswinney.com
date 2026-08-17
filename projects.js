@@ -65,5 +65,14 @@ const PROJECTS = [
     summary: "Passed the CompTIA Cybersecurity Analyst exam — security analytics, threat detection, and incident response across the full attack chain. First entry shipped through my AI intake pipeline.",
     tags: ["Security Analytics", "Threat Detection", "Incident Response"],
     links: {}
+  },
+  {
+    id: "copilot-byok-redaction-proxy",
+    title: "Copilot Chat BYOK Redaction Proxy",
+    category: "ai-security",
+    date: "Aug 2026",
+    summary: "A local, zero-dependency Python HTTP proxy that sits transparently between VS Code Copilot Chat's BYOK endpoints and DoD/Navy-hosted AI models — parsing every outbound request, masking secrets and PII with pattern-based redaction, and streaming model responses back unchanged. Includes a PowerShell installer and transport hardening for locked-down environments.",
+    tags: ["Python", "Secret & PII Redaction", "BYOK", "TLS Proxy"],
+    links: {}
   }
 ];

@@ -148,7 +148,7 @@
         const grid = document.getElementById('projects-grid');
         if (!grid || typeof PROJECTS === 'undefined') return;
 
-        const BADGE_LABEL = { ai: 'AI', security: 'Security', work: 'Work', cert: 'Certification' };
+        const BADGE_LABEL = { ai: 'AI', 'ai-security': 'AI Security', security: 'Security', work: 'Work', cert: 'Certification' };
 
         PROJECTS.slice().reverse().forEach(function (p) {
             const card = document.createElement('article');
