@@ -71,7 +71,7 @@ const PROJECTS = [
     title: "Copilot Chat BYOK Redaction Proxy",
     category: "ai-security",
     date: "Aug 2026",
-    summary: "A local, zero-dependency Python HTTP proxy that sits transparently between VS Code Copilot Chat's BYOK endpoints and DoD/Navy-hosted AI models — parsing every outbound request, masking secrets and PII with pattern-based redaction, and streaming model responses back unchanged. Includes a PowerShell installer and transport hardening for locked-down environments.",
+    summary: "A local, zero-dependency Python HTTP proxy that sits transparently between VS Code Copilot Chat's BYOK endpoints and DoD/Navy-hosted AI models — parsing every outbound request, masking secrets and PII with pattern-based redaction, and streaming model responses back unchanged. Includes a PowerShell installer and transport hardening for locked-down environments — plus a presentation breaking down the proxy's inner workings and the VS Code use case.",
     tags: ["Python", "Secret & PII Redaction", "BYOK", "TLS Proxy"],
     links: {}
   }
